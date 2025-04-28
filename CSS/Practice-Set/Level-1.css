@@ -1,0 +1,18 @@
+#heading {
+    color:blue;
+}
+.div {
+    color:aqua;
+}
+#id {
+    color:blueviolet;
+}
+h1 {
+    color:brown;
+}
+#div_1 ,#div_2{
+    color:yellowgreen;
+}
+/* #div_2 {
+    color:pink;
+} */

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Float Property</title>
+    <style>
+        #heading {
+            margin-left: 550px;
+            color: red;
+        }
+        #container {
+            height: 1200px;
+            width: 500px;
+            border: 3px solid #000000;
+            background-color: aqua;
+            display:flex;
+            align-items: start;
+        }
+        .box {
+            color:white;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            margin: 8px;
+            background-color: blueviolet;
+            border: 3px solid black;           
+        }
+        #box2 {
+            background-color: red;
+            align-self: center;
+        }
+        #box3 {
+            background-color: orange;
+            flex-shrink: 5;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading"> FLEX CONTAINER </h1>
+    <div id="container">
+        <div id="box1" class="box">Box-1</div>
+        <div id="box2" class="box">Box-2</div>
+        <div id="box3" class="box">Box-3</div>
+        <div id="box4" class="box">Box-4</div>
+        <div id="box5" class="box">Box-5</div>
+    </div>
+</body>
+</html>

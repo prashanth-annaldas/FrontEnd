@@ -1,0 +1,20 @@
+.div{
+    height:30px;
+    width:70px;
+}
+#div1{
+    color: rgba(47, 38, 38,0.8);
+    background-color:red;
+}
+#div2 {
+    height: 400px;
+    width: 575px;
+    color: white;
+    /* background-color: aqua;
+    background-position: center;
+    background-image: url(/Images/Prashanth-Sir-Css.png);
+    background-repeat: no-repeat; */
+    
+    background: blue url(/Images/Prashanth-Sir-Css.png)
+                no-repeat center;
+}

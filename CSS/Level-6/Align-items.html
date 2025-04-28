@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Float Property</title>
+    <style>
+        #heading {
+            margin-left: 550px;
+            color: red;
+        }
+        #container {
+            height: 1200px;
+            width: 900px;
+            border: 3px solid #000000;
+            background-color: aqua;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;   /* This is for Main (Horizontal) items */
+            align-items: start;     /* This is for Cross (Vertical) items */
+            align-content: center;   /* There is NO Gap between the first and second line boxes */
+        }
+        .box {
+            color:white;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            margin: 8px;
+            background-color: blueviolet;
+            border: 3px solid black;          
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading"> FLEX CONTAINER </h1>
+    <div id="container">
+        <div id="box1" class="box">Box-1</div>
+        <div id="box2" class="box">Box-2</div>
+        <div id="box3" class="box">Box-3</div>
+        <div id="box4" class="box">Box-4</div>
+        <div id="box5" class="box">Box-5</div>
+        <div id="box6" class="box">Box-6</div>
+        <div id="box7" class="box">Box-7</div>
+        <div id="box8" class="box">Box-8</div>
+        <div id="box9" class="box">Box-9</div>
+        <div id="box10" class="box">Box-10</div>
+    </div>
+</body>
+</html>

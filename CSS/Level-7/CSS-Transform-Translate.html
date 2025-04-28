@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Transform</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: aquamarine;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            transition: all 1s ease-in-out 0s;
+        }
+        #box1:hover {
+            transform: translate(100px);
+        }
+        #box2:hover {
+            transform: translate(100px,100px);
+        }
+        #box3:hover {
+            transform: translatex(100px);
+        }
+        #box4:hover {
+            transform: translatey(100px);
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Rotate</div><br>
+    <div id="box2" class="box">Rotate X,Y deg</div><br>
+    <div id="box3" class="box">Rotate X deg</div><br>
+    <div id="box4" class="box">Rotate Y deg</div>
+</body>
+</html>

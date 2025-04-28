@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Relative Units</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            font-size:50px;
+        }
+        #first {
+            height: 500px;
+            width: 700px;
+            background-color: aquamarine;
+            font-size: 50px;
+        }
+        #first-1 {
+            height: 20%; /* % is used to declare height or width of the child element from the parent element, when we have to declare some % height or width FROM the parent element */
+            width: 50%;
+            background-color:blueviolet;
+            font-size: 2em; /* em is used to declare font size of the child element from the parent element, when we have to delclare font size of child element is multiples of parent element */
+        }
+        #first-2 {
+            height: 20%;
+            width: 50%;
+            background-color:blueviolet;
+            font-size: 2rem; /*rem is linked with root elements like universal words, example *{    } present in style, in this the text is Project . In that font size is increasing where the rem is present that is also increased */
+        }
+    </style>
+</head>
+<body>
+    Project
+    <div id="first">
+        Box-1
+        <div id="first-1"> Box-1.1</div><br>
+        <div id="first-2"> Box-1.2</div>
+    </div>
+</body>
+</html>

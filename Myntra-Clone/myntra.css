@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding:0px;
+    color: black;
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+header {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:4.5px solid #f6f6f6;
+}
+.myntra_home {
+    height: 37px;
+}
+.home_container {
+    margin-left: 4%;
+}
+.selector_bar {
+    text-decoration:none;
+    display: flex;
+    min-width: 600px;
+    justify-content: space-evenly;
+}
+.selector_bar a {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:27.3px 0;
+    border-bottom: 3.5px solid #ffffff;
+}
+.selector_bar a:hover {
+    border-bottom: 3.5px solid #1D85FC;
+}
+#super {
+    font-size: 10px;
+    color: #ff3f6c;
+}
+.search_bar {
+    height: 40px;
+    min-width: 380px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.search_icon {
+    height: 30px;
+    background: #f5f5f6;
+    border: 1px solid #f5f5f6;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+#search {
+    width:500px;
+    height: 39.6px;
+    background-color: #f5f5f6;
+    border: 1px solid #f5f5f6;
+}
+.action_bar {
+    margin-right: 4%;
+}
+.action_bar {
+    display: flex;
+    min-width: 200px;
+    justify-content: space-evenly;
+}
+.action_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner_heading {
+    margin: 2%;
+}
+.Banner_image {
+    width: 100%;
+    height: 100%;
+}
+.category_heading {
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: 0.15em;
+    margin: 50px 0 10px 30px;
+    font-weight: 700;
+    font-size: 1.8em;
+    max-height: 5em;
+}
+.category_items {
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.offer_items {
+    width: 140px;
+}
+.footer_container {
+    padding:30px 0px 40px 0px ;
+    background-color: #FAFBFC;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+}
+.footer_column {
+    display: flex;
+    flex-direction: column;
+}
+.footer_column h5{
+    color: #282c3f;
+    font-size: 14px;
+    padding-bottom: 25px;
+}
+.footer_column a {
+    color:#696b79;
+    text-decoration: none;
+    font-size: 13px;
+    padding-bottom: 5px;
+}

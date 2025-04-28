@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Position-Property-(z-Index)</title>
+    <style>
+        .box {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            margin: 0; padding: 0;
+        }
+        #box1 {
+            background-color: blueviolet;
+            top: 20px;
+            left: 40px;
+            z-index: 1;
+        }
+        #box2{
+            background-color: brown;
+            top: 40px;
+            left: 20px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">z-Index-1</div>
+    <div id="box2" class="box">z-Index-2</div>
+</body>
+</html>

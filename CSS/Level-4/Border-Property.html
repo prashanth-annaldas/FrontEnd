@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Border Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .div {
+            height: 50px;
+            width: 50px;
+            text-align: center;
+        }
+        #first {
+            border:2px black;
+            border-radius:200px;
+            box-sizing:content-box; /*The box became big*/
+            background-color: blueviolet;
+        }
+        #second {
+            border: 2px dashed black;
+            border-radius:5px;
+            box-sizing:border-box; /*The box became small*/
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="first" class="div">First Border</div><br>
+    <div id="second" class="div">Second Border</div>
+</body>
+</html>
