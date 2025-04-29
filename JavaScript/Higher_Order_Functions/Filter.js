@@ -9,6 +9,10 @@ function isOdd(x){
     return x % 2;
 } 
 
+function maxval(x){
+    
+}
+
 function Greater(x){
     return x > 3;
 }
