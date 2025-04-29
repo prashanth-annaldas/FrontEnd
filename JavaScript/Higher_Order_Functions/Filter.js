@@ -6,7 +6,7 @@ function isEven(x){
 
 function isOdd(x){ 
     return x % 2;
-}
+} 
 
 function Greater(x){
     return x > 3;
