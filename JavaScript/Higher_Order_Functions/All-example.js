@@ -16,7 +16,7 @@ const result2 = c.reduce (function(acc,curr){
     else{
         acc[curr.age] = 1;
     }
-    return acc;  
+    return acc;
 },{});
 
 console.log(result2);
@@ -24,3 +24,12 @@ console.log(result2);
 const result3 = c.filter((b)=>b.age<=37).map((d)=>d.firstName);
 
 console.log(result3);
+
+const result4 = c.reduce((acc,curr)=>{
+    if(curr.age<38){
+        acc.push(curr.firstName);
+    }    
+    return acc;
+},[]);
+console.log(result4);
+
