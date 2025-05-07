@@ -74,7 +74,10 @@ header {
     background-color:#232f3e ;
     padding-top: 1%;
     height: 100%;
-    width: 100%;
+    width: 100%; 
+}
+#selector:hover{
+    border: 1px solid white;
 }
 .all {
     background-color:#232f3e ;
