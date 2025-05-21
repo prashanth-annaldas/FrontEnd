@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/Projects/Calculator/calculator.css">
+</head>
+<body>
+    <main>
+        <h1 id="heading">CALCULATOR</h1>
+        <div id="calculator">
+            <input type="text" id="display">
+            <div id="button_container">
+                <button class="button" onclick="cleardisplay()">c</button>
+                <button class="button" onclick="displayupdate('1')">1</button>
+                <button class="button" onclick="displayupdate('2')">2</button>
+                <button class="button" onclick="displayupdate('+')">+</button>
+                <button class="button" onclick="displayupdate('3')">3</button>
+                <button class="button" onclick="displayupdate('4')">4</button>
+                <button class="button" onclick="displayupdate('-')">-</button>
+                <button class="button" onclick="displayupdate('5')">5</button>
+                <button class="button" onclick="displayupdate('6')">6</button>
+                <button class="button" onclick="displayupdate('*')">*</button>
+                <button class="button" onclick="displayupdate('7')">7</button>
+                <button class="button" onclick="displayupdate('8')">8</button>
+                <button class="button" onclick="displayupdate('/')">/</button>
+                <button class="button" onclick="calculateNumbers()">=</button>
+                <button class="button" onclick="displayupdate('9')">9</button>
+                <button class="button" onclick="displayupdate('0')">0</button>
+                <button class="button" onclick="displayupdate('.')">.</button>
+            </div>
+        </div>
+    </main>
+    <script src="/Projects/Calculator/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+}
+#heading {
+    font-size: 70px;
+    color: rgb(110, 3, 209);
+}
+.button {
+    height: 80px;
+    width: 100px;
+    font-size: 25px;
+    margin: 20px;
+    background-color: rgb(120, 247, 247);
+}
