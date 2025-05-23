@@ -7,9 +7,15 @@
 <body>
     <h1 id="heading">Bat Ball Stump Game</h1>
     <div id="Cricket_Objects"></div>
-    <button class="button" onclick="matchResult('Bat')">Bat</button>
-    <button class="button" onclick="matchResult('Ball')">Ball</button>
-    <button class="button" onclick="matchResult('Stump')">Stump</button>
+    <button class="button" onclick="getResult('Bat')">Bat</button>
+    <button class="button" onclick="getResult('Ball')">Ball</button>
+    <button class="button" onclick="getResult('Stump')">Stump</button>
+    <h3 id="userChoice"></h3>
+    <h3 id="computerChoice"></h3>
+    <h2 id="result"></h2>
+    <h3 id="score-id"></h3>
+    <button  id="resetButton" onclick="localStorage.clear() 
+    scoreRestore();">Restart</button>
     <script src="/Projects/Cricket-Game/Cricket.js"></script>
 </body>
 </html>
