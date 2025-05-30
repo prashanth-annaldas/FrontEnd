@@ -1,0 +1,40 @@
+main {
+    display: grid;
+    place-items: center;
+}
+#delete_button {
+    background-color: red;
+    color: white;
+    width: 90px;
+    cursor: pointer;
+}
+#items {
+    margin-top: 15px;
+}
+#dates {
+    margin-top: 15px;
+}
+.searched_items {
+    margin: 10px;
+    height: 30px;
+    font-size: 17px;
+}
+#search_bar {
+    height: 40px;
+}
+#text_bar {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    grid-gap: 10px;
+}
+#add_button {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#displayItems {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 210px 150px 100px;
+}
