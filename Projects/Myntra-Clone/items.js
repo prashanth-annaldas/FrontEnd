@@ -51,7 +51,7 @@ const items = [
         item_name: 'Indian Cricket ODI Jersey',
         original_price: 999,
         current_price: 999,
-        discount: 10,
+        discount: 0,
         return_period: 14,
         delivery_date: '10 Oct 2023',
         rating: {
