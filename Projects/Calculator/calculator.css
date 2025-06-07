@@ -31,4 +31,5 @@ body{
     width: 60px;
     margin: 5px;
     background-color: aquamarine;
+    cursor: pointer;
 }
