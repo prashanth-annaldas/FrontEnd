@@ -22,3 +22,9 @@ createOrder(cart)
     .then(function(paymentDetails){
         return updateWallet(paymentDetails);
     });
+
+// It Shows in the Output like this 
+// Promise{<pending>}                           // At first it pending bcz the js doesn't wait for NON so it will executes pending state
+//     [[Prototype]]:Promise                    // But at the end of the execution it get the PromiseState as fulfilled, PromiseResult as Response
+//     [[PromiseState]]:"fulfilled"
+//     [[PromiseResult]]:Response
