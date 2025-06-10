@@ -19,7 +19,7 @@ body{
     padding: 7px;
     margin: 10px;
     width: 85%;
-    font-size: 20px;
+    font-size: 30px;
 }
 #button_container{
     display:flex;
@@ -27,6 +27,7 @@ body{
     flex-wrap: wrap;
 }
 .button{
+    font-size: 25px;
     height: 60px;
     width: 60px;
     margin: 5px;
