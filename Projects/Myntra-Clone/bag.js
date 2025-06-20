@@ -59,6 +59,7 @@ function removeItem(itemId){
     displayBagCount();
     displayBagItems();
     bagSummaryDetails();
+    showToast(`❌ Item Removed`);
 }
 function bagSummaryDetails(){
 

@@ -8,16 +8,16 @@ function onLoad(){
 }
 
 function showToast(message) {
-    const toast = document.getElementById('toast');
+    const toast = document.querySelector('.toast');
     toast.innerText = message;
     toast.style.visibility = 'visible';
     toast.style.opacity = '1';
 
     // Hide after 2.5 seconds
-    setTimeout(() => {
+    setTimeout(function () {
         toast.style.opacity = '0';
         toast.style.visibility = 'hidden';
-    }, 2500);
+    }, 1000);
 }
 
 function addToBag(itemId) {
@@ -25,10 +25,10 @@ function addToBag(itemId) {
         bagItems.push(itemId);
         localStorage.setItem('bagItems',JSON.stringify(bagItems));
         displayBagCount();
-        alert('Item added to bag ✅');
+        showToast('Item added to bag ✅');
     }
     else{
-        alert('Item is already in the bag ⚠️');
+        showToast('Item is already in the bag ⚠️');
     }
 }
 
