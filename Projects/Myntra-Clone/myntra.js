@@ -7,6 +7,19 @@ function onLoad(){
     displayBagCount();
 }
 
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.innerText = message;
+    toast.style.visibility = 'visible';
+    toast.style.opacity = '1';
+
+    // Hide after 2.5 seconds
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.visibility = 'hidden';
+    }, 2500);
+}
+
 function addToBag(itemId) {
     if(!bagItems.includes(itemId)){
         bagItems.push(itemId);
