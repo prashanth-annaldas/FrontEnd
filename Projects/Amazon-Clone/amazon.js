@@ -2,6 +2,7 @@ onload();
 function onload(){
   showSelectorBar();
   displayItems();
+  displayBagCount();
 }
 
 function showSelectorBar(){
@@ -31,6 +32,10 @@ function showSelectorBar(){
       aTag.innerText=navBarObj[i].text;
       selectorNavBar.appendChild(aTag);
   }
+}
+
+function displayBagCount(){
+
 }
 
 function displayItems(){
