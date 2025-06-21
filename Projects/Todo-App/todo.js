@@ -1,20 +1,21 @@
 itemsList = [];
 dateList = [];
 displayItems();
-function addItems(){
-    let inputElements = document.querySelector('#search_bar');]
-    itemsList.push(items);
-    inputElements.value = '';
-    
+function addItems() {
+    let inputElements = document.querySelector('#search_bar');
+    let items = inputElements.value.trim();
     let inputdate = document.querySelector('#date_bar');
-    let dates = inputdate.value;
-    dateList.push(dates);
-    inputdate.value = '';
+    let dates = inputdate.value.trim();
+
     if (items === '' || dates === '') {
-        showToast("Please enter both a task and a date.");
-        return ;
+        showToast("Both item and date are required!");
+        return;
     }
 
+    itemsList.push(items);
+    dateList.push(dates);
+    inputElements.value = '';
+    inputdate.value = '';
     displayItems();
 }
 function displayItems(){
