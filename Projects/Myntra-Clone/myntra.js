@@ -13,7 +13,6 @@ function showToast(message) {
     toast.style.visibility = 'visible';
     toast.style.opacity = '1';
 
-    // Hide after 2.5 seconds
     setTimeout(function () {
         toast.style.opacity = '0';
         toast.style.visibility = 'hidden';
