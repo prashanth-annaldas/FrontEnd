@@ -7,16 +7,12 @@ function isEven(x){
 
 function isOdd(x){ 
     return x % 2;
-} 
-
-function maxval(x){
-    
 }
 
 function Greater(x){
     return x > 3;
 }
-const E_result = arr.filter(isEven); 
+const E_result = arr.filter(isEven);
 const O_result = arr.filter(isOdd);
 const G_result = arr.filter(Greater);
 

@@ -1,7 +1,7 @@
-function x(){
-    let count=0;
-    document.getElementById("ClickMe").addEventListener("click", function a() {
-        console.log("Button Clicked",++count);
-    });
+let count=0;
+function onClick(a){
+    a();
 }
-x();
+function a(){
+    console.log('Button Clicked',++count);
+}

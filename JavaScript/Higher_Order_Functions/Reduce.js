@@ -12,7 +12,7 @@ console.log(result_sum(arr));
 
 const result = arr.reduce(function(acc, curr){          // Using Reduce function
     return acc + curr; 
-}, 0); 
+}, 0);
 
 console.log(result);
 
@@ -36,6 +36,6 @@ const result_maximum = arr.reduce(function(acc, curr){          // Using Reduce 
         return curr; 
     }
     return acc;
-}, 0); 
+}, 0);
 
 console.log(result_maximum);
