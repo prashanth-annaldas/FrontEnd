@@ -5,8 +5,8 @@ const p = new Promise ((resolve,reject)=>{
 });
 
 async function usingAwait(){
-    // console.log('Hey Iam Prashanth');            // It will executes Quickly!
-    const res = await p;                            // It will waits for the promise to be resolving then it will executes all the lines after this.
+    console.log('Hey Iam Prashanth');            // It will executes Quickly!
+    const res = await p;          // It will waits for the promise to be resolving then it will executes all the lines which is present after this.
     console.log('HELLO WROLD!!');
     console.log(res);
 }
