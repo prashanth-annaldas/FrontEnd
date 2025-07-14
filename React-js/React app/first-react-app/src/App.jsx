@@ -1,9 +1,10 @@
-import LikeButton from "./likeButton";
+import LikeButton from "./Buttons";
+import YtChannel from "./YouTube";
 function App(){
-  return (<div>
-    <h1>LinkedIn Post</h1>
+  return <div>
+    <YtChannel/>
     <LikeButton/>
-  </div>);
-} 
+  </div>;
+}
 
 export default App;
