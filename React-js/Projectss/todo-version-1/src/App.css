@@ -1,0 +1,34 @@
+.container {
+    margin-left: 385px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+}
+
+.itemsContainer {
+    text-align: left;
+
+}
+
+.n-row {
+    margin: 10px 5px;
+}
+
+.n-button {
+    margin-left: 0px;
+}
+
+.btn-success {
+    width: 70px;
+}
+
+.btn-danger {
+    margin-left: 8px;
+}
