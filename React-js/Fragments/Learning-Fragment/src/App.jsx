@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return  <React.Fragment>     {/* <>  */}
-            <h1>Eapcet Colleges</h1>
+            <h1>TgEapcet Colleges</h1>
               <ul className="list-group">
                 <li className="list-group-item">JNTUH</li>
                 <li className="list-group-item">OU</li>

@@ -1,14 +1,15 @@
+import FoodItems from './components/listItems';
+import ErrorMsg from './components/errMessage';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Map() {
-  let listItems = ["JNTUH","OU","VNR","CMR","GCTC"];
+    // let listItems = [];
+    let listItems = ["Pants","Shoes","Shirts","T-Shirts","Kurta","shorts"];
+
   return  (<>
-            <h1>Eapcet Colleges (Using Map)</h1>
-              <ul className="list-group">
-                {listItems.map((item) =>(
-                    <li className="list-group-item">{item}</li>
-                ))}
-              </ul>
+              <h1>Shop (Using Map)</h1> <br/>
+              <ErrorMsg items = {listItems}/>
+              <FoodItems items = {listItems}/>
            </>
   );
 }
