@@ -1,10 +1,12 @@
 .item {
-    background-color: aqua;
     font-size: 25px;
     color: blue;
 }
 h1 {
+    text-align: center;
     color: orangered;
-    background-color: bisque;
     margin-top: 7px;
+}
+.Button{
+    float: right;
 }
