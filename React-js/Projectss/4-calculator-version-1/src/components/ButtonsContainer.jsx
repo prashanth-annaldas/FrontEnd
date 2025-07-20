@@ -1,8 +1,8 @@
 import styles from './ButtonsContainer.module.css'
 import Button from './Button'
-function ButtonsContainer(){
+function ButtonsContainer({onInput,onClear,onEvaluate}){
     return <div className={styles.buttonContainer}>
-      <Button></Button>
+      <Button onInput = {onInput} onClear = {onClear} onEvaluate = {onEvaluate}></Button>
       </div>
 }
 
