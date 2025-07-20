@@ -1,6 +1,7 @@
 .button{
-    width: 45px;
-    height: 45px;
+    width: 70px;
+    height: 70px;
     margin: 5px;
     cursor: pointer;
+    background-color: aqua;
 }

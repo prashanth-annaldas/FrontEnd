@@ -1,7 +1,6 @@
 import Display from './components/Display'
 import React, { useState } from 'react';
 import ButtonsContainer from './components/ButtonsContainer'
-import './App.css'
 import styles from './App.module.css'
 
 function App() {
@@ -24,10 +23,12 @@ function App() {
       }
   };
 
-  return <div className={styles.calculator}>
-    <Display value = {currentDisplay}></Display>
-    <ButtonsContainer onInput = {displayupdate} onClear = {cleardisplay} onEvaluate = {Evaluatedisplay}></ButtonsContainer>
-  </div>
+  return <><h1>Calculator</h1>
+            <div className={styles.calculator}>
+              <Display value = {currentDisplay}></Display>
+              <ButtonsContainer onInput = {displayupdate} onClear = {cleardisplay} onEvaluate = {Evaluatedisplay}></ButtonsContainer>
+            </div>
+          </>
 }
 
 export default App;
