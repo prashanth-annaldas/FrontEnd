@@ -1,10 +1,8 @@
-const Item = ({clothItems})=>{
-    const handleButtonClicked = (clothItems)=>{
-        console.log(`${clothItems} being bought`)
-    }
+const Item = ({clothItems, handleButtonClicked})=>{
+    
     return <li className="list-group-item">
         <span className="item">{clothItems}</span>
-        <button className="Button  btn btn-info" onClick={()=>handleButtonClicked(clothItems)}>Buy</button>
+        <button className="Button  btn btn-info" onClick={handleButtonClicked}>Buy</button>
     </li>
 }
 
