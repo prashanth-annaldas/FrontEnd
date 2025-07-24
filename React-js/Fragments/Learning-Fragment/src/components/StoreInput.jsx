@@ -1,8 +1,8 @@
 import styles from './StoreInput.module.css'
 
-function StoreInput({handleOnChange}){
+function StoreInput({handleOnKeyDown}){
 
-    return <input className={styles.input} type="text" placeholder='Enter any Item' onChange={handleOnChange}/>
+    return <input className={styles.input} type="text" placeholder='Enter any Item' onKeyDown={handleOnKeyDown}/>
 }
 
 export default StoreInput;
