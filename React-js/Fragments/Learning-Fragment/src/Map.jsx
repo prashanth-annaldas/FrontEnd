@@ -1,20 +1,25 @@
+import { useState } from 'react';
 import StoreItems from './components/listItems';
 import ErrorMsg from './components/errMessage';
 import Container from './components/Container';
 import StoreInput from './components/StoreInput';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-function Map() {
-    // let listItems = [];
-    let listItems = ["Pants","Shoes","Shirts","T-Shirts","Kurta","shorts"];
 
+function Map() {
+  const [storeItems, setTextToShow] = useState([]);
+  const OnKeyDown = (event)=>{
+    if(event.key === "Enter"){
+      let newStoreItems = event.target.value;
+      let newItem = [...storeItems, newStoreItems];
+      setTextToShow(newItem);
+    }
+  }
   return  (<Container>
               <h1>Online Store</h1>
-              <StoreInput handleOnChange = {(event)=>{ 
-        console.log(event.target.value);}
-    }/>
-              <ErrorMsg items = {listItems}/>
-              <StoreItems items = {listItems}/>
+              <StoreInput handleOnKeyDown = {OnKeyDown}/>
+              <ErrorMsg items = {storeItems}/>
+              <StoreItems items = {storeItems}/>
            </Container>
   );
 }
