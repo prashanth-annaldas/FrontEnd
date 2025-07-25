@@ -8,14 +8,14 @@ h1 {
     padding-bottom: 20px;
 }
 .container{
-    margin: 10px;
-
+    margin: 20px;
 }
 input {
     width: 100%;
 }
 .itemsContainer {
     text-align: left;
+    width: 60%;
 }
 .n-row {
     margin: 10px 5px;
@@ -25,9 +25,13 @@ input {
     margin-left: 80px;
 }
 .btn-success{
-    margin-left: 607%;
+    margin-left: 708%;
     width: 70px;
 }
 .date-Bar{
     margin-left: 112%;
+    width: 100%;
+}
+.text-center{
+    width: 60%;
 }
