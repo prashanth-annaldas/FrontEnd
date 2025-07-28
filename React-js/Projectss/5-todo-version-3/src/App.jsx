@@ -6,24 +6,6 @@ import "./App.css"
 import { useState } from "react";
 
 function App() {
-  const initializeTodoItems = [
-    {
-      name: "Shirts",
-      date: "20/01/2025",
-    },
-    {
-      name: "Pants",
-      date: "20/01/2025",
-    },
-    {
-      name: "Shorts",
-      date: "20/01/2025",
-    },
-    {
-      name: "Shorts",
-      date: "20/01/2025",
-    },
-  ];
 
   const [todoItems,setTodoItems] = useState([]);
 
