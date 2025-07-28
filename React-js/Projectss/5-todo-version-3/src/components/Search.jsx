@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { RiAddLargeFill } from "react-icons/ri";
 
 function SearchBar({onNewItems}){
   const [todoName,setTodoName] = useState();
@@ -22,7 +23,7 @@ function SearchBar({onNewItems}){
             <div className="row n-row">
               <div className="col-6"><input type="text" value={todoName} placeholder="Enter Todo Here" onChange={handleNameChange}/></div>
               <div className="col-4"><input type="date" value={todoDate} onChange={handleDateChange}/></div>
-              <div className="col-1"><button type="button" className="btn btn-success n-button" onClick={handleButtonClicked}>Add</button></div>
+              <div className="col-1"><button type="button" className="btn btn-success n-button" onClick={handleButtonClicked}><RiAddLargeFill  /></button></div>
             </div>
           </div>);
 }
