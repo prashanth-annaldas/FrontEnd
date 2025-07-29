@@ -1,30 +1,25 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { RiAddLargeFill } from "react-icons/ri";
 
 function SearchBar({onNewItems}){
-  const [todoName,setTodoName] = useState();
-  const [todoDate,setTodoDate] = useState();
+  const todoNameElement = useRef();
+  const todoDateElement = useRef();
 
-  function handleNameChange(event){
-    setTodoName(event.target.value);
-  }
-  
-  function handleDateChange(event){
-    setTodoDate(event.target.value);
-  }
-
-  function handleButtonClicked(){
+  function handleButtonClicked(event){
+    event.preventDefault();
+    const todoName = todoNameElement.current.value;
+    const todoDate = todoDateElement.current.value;
+    todoNameElement.current.value = "";
+    todoDateElement.current.value = "";
     onNewItems(todoName,todoDate);
-    setTodoName("");
-    setTodoDate("");
-  }
+  };
 
   return (<div className="container text-center">
-            <div className="row n-row">
-              <div className="col-6"><input type="text" value={todoName} placeholder="Enter Todo Here" onChange={handleNameChange}/></div>
-              <div className="col-4"><input type="date" value={todoDate} onChange={handleDateChange}/></div>
-              <div className="col-1"><button type="button" className="btn btn-success n-button" onClick={handleButtonClicked}><RiAddLargeFill  /></button></div>
-            </div>
+            <form className="row n-row" onSubmit={handleButtonClicked}>
+              <div className="col-6"><input type="text" ref = {todoNameElement} placeholder="Enter Todo Here" /></div>
+              <div className="col-4"><input type="date" ref = {todoDateElement} /></div>
+              <div className="col-1"><button type="submit" className="btn btn-success n-button"><RiAddLargeFill  /></button></div>
+            </form>
           </div>);
 }
 
