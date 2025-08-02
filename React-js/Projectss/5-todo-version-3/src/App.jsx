@@ -23,7 +23,7 @@ function App() {
   return (<center className="todo-container">
             <AppName/>
               <SearchBar onNewItems={handleNewButton}/>
-              {todoItems.length === 0 && <WelcomeMsg todoItems={todoItems}/>}
+              <WelcomeMsg todoItems={todoItems}/>
               <TodoItem todoItems={todoItems} onDeleteItems = {handleDeleteButton}/>
          </center>);
 }
