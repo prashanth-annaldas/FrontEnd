@@ -1,0 +1,15 @@
+.appContainer{
+    display: flex;
+}
+.content{
+    width: 100%;
+}
+.sideBar{
+    min-height: 729px;
+}
+.post{
+    margin:20px 50px;
+}
+.hashTag{
+    margin:0px 3px;
+}
