@@ -1,17 +1,52 @@
+import { useContext, useRef } from "react";
+import { PostList } from '../store/post-list-store';
 function CreatePost(){
-    return <form>
+
+    const {addPost} = useContext(PostList);
+
+    const userIdElement = useRef();
+    const titleElement = useRef();
+    const bodyElement = useRef();
+    const reactionsElement = useRef();
+    const hashTagsElement = useRef();
+
+    const handleOnSubmit = (event)=>{
+        event.preventDefault();
+        let userId = userIdElement.current.value;
+        let title = titleElement.current.value;
+        let body = bodyElement.current.value;
+        let reactions = reactionsElement.current.value;
+        let hashTag = hashTagsElement.current.value.split(" ");
+
+        userIdElement.current.value = "";
+        titleElement.current.value = "";
+        bodyElement.current.value = "";
+        reactionsElement.current.value = "";
+        hashTagsElement.current.value = "";
+
+        addPost(userId,title,body,reactions,hashTag);
+    };
+
+    return <form className="createPost" onSubmit={handleOnSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <label htmlFor="userId" className="form-label">User Id</label>
+                    <input type="text" ref={userIdElement} className="form-control" id="userId" placeholder="Enter userId"/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1"/>
+                    <label htmlFor="postTitle" className="form-label">Post Title</label>
+                    <input type="text" ref={titleElement} className="form-control" id="postTitle" placeholder="Title of the post"/>
                 </div>
-                <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+                <div className="mb-3">
+                    <label htmlFor="body" className="form-label">Body</label>
+                    <textarea type="text" ref={bodyElement} rows="4" className="form-control" id="body" placeholder="About the post.."/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="reactions" className="form-label">Reactions</label>
+                    <input type="text" ref={reactionsElement} className="form-control" id="reactions" placeholder="HHow many people reacted.."/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="postTitle" className="form-label">HashTags</label>
+                    <input type="text" ref={hashTagsElement} className="form-control" id="postTitle" placeholder="Enter #HashTags here.."/>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
