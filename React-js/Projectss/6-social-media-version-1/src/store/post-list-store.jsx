@@ -9,15 +9,30 @@ export const PostList = createContext({
 const PostListReducer = (currPostList,action)=>{
     let newPostList = currPostList;
     if(action.type === "DELETE_POST"){
-        newPostList = currPostList.filter((post)=>(post.id !== action.payload.postId))
+        newPostList = currPostList.filter((post)=>(post.id !== action.payload.postId));
+    }
+    else{
+        newPostList = [action.payload, ...currPostList];
     }
     return newPostList;
 }
 
 function PostListProvider({children}){
-    const [postList,dispatchPostList] = useReducer(PostListReducer,DEFAULT_POST_LIST);
+    const [postList,dispatchPostList] = useReducer(PostListReducer,[]);
 
-    const addPost = ()=>{};
+    const addPost = (userId,title,body,reactions,hashTag)=>{
+        dispatchPostList({
+            type:"ADD_POST",
+            payload:{
+            id:Date.now(),
+            heading:title,
+            body:body,
+            postReactions:reactions,
+            userId:userId,
+            hashTags:hashTag,
+            },
+        });
+    };
 
     const deletePost = (postId)=>{
         dispatchPostList({
@@ -31,21 +46,6 @@ function PostListProvider({children}){
     return <PostList.Provider value={{postList, addPost, deletePost}}>{children}</PostList.Provider>;
 }
 
-const DEFAULT_POST_LIST = [
-    {
-        id:'1',
-        heading:'Going to Ananthagiri Hills',
-        body:'I am very enjoyed travelling with my friends',
-        postReactions:24,
-        hashTags:['Ananthagiri','Hills','Trip'],
-    },
-    {
-        id:'2',
-        heading:'Movie',
-        body:'I went to Salaar Movie with my friends, we were very much enjoyed the movie.',
-        postReactions:56,
-        hashTags:['Movie','Salaar','Prabhas'],
-    },
-]
+
 
 export default PostListProvider;
