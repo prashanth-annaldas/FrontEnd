@@ -3,10 +3,12 @@ import Post from './Post'
 import {PostList as PostListData} from '../store/post-list-store'
 import WelcomeMsg from './WelcomeMsg';
 import LoadingSpinner from './LoadingSpinner'
+import { useNavigate } from 'react-router-dom';
 
 function PostList(){
     const {postList, addInitialPosts} = useContext(PostListData);
     const [fetching,setFetching] = useState(false);
+    const navigate = useNavigate();
     useEffect(()=>{
         setFetching(true);
 
@@ -19,6 +21,7 @@ function PostList(){
                 addInitialPosts(data.posts);
                 setFetching(false);
             });
+            navigate("/");
             return () =>{
                 controller.abort();
             }
