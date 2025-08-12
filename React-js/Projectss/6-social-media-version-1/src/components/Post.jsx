@@ -12,9 +12,9 @@ function Post({post}){
                         </span>
                     </h5>
                     <p className="card-text">{post.body}</p>
-                    {post.tags.map((tags)=><span key={tags} className="badge text-bg-primary hashTag">{tags}</span>)}
+                    {post.tags?.map((tags)=><span key={tags} className="badge text-bg-primary hashTag">{tags}</span>)}
                     <div className="alert alert-success reaction" role="alert">
-                        This post has been reacted {post.views} people.
+                        This post has been reacted {post.reactions} people.
                     </div>
                 </div>
             </div>
