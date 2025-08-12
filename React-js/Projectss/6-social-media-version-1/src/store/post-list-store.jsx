@@ -24,17 +24,11 @@ const PostListReducer = (currPostList,action)=>{
 function PostListProvider({children}){
     const [postList,dispatchPostList] = useReducer(PostListReducer,[]);
 
-    const addPost = (userId,title,body,reactions,hashTag)=>{
+    const addPost = (posts)=>{
         dispatchPostList({
             type:"ADD_POST",
-            payload:{
-                id:Date.now(),
-                title:title,
-                body:body,
-                reactions:reactions,
-                userId:userId,
-                tags:hashTag,
-            },
+            payload:
+                posts,
         });
     };
 
@@ -54,6 +48,7 @@ function PostListProvider({children}){
                 postId,
             },
         });
+        [dispatchPostList];
     };
 
     return <PostList.Provider value={{postList, addPost, addInitialPosts, deletePost}}>{children}</PostList.Provider>;
