@@ -25,7 +25,21 @@ function CreatePost(){
         reactionsElement.current.value = "";
         hashTagsElement.current.value = "";
 
-        addPost(userId,title,body,reactions,hashTag);
+        fetch("https://dummyjson.com/posts/add", {
+            method:"POST",
+            headers: {"Content-Type" : "application/json"},
+            body:JSON.stringify({
+                title :title,
+                body:body,
+                reactions:reactions,
+                userId:userId,
+                hashTag:hashTag,
+            }),
+        })
+            .then(res => res.json())
+            .then((post)=>{
+                addPost(post);
+            });
     };
 
     return <form className="createPost" onSubmit={handleOnSubmit}>
@@ -43,7 +57,7 @@ function CreatePost(){
                 </div>
                 <div className="mb-3">
                     <label htmlFor="reactions" className="form-label">Reactions</label>
-                    <input type="text" ref={reactionsElement} className="form-control" id="reactions" placeholder="HHow many people reacted.."/>
+                    <input type="text" ref={reactionsElement} className="form-control" id="reactions" placeholder="How many people reacted.."/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="postTitle" className="form-label">HashTags</label>
