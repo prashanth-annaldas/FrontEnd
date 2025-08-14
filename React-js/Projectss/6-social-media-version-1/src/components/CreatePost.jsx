@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 function CreatePost(){
 
     const {addPost} = useContext(PostList);
+    const navigate = useNavigate();
 
     const userIdElement = useRef();
     const titleElement = useRef();
@@ -40,6 +41,7 @@ function CreatePost(){
             .then((post)=>{
                 addPost(post);
             });
+            navigate("/create-post");
     };
 
     return <form className="createPost" onSubmit={handleOnSubmit}>
