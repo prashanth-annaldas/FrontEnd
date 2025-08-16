@@ -14,7 +14,7 @@ function Post({post}){
                     <p className="card-text">{post.body}</p>
                     {post.tags?.map((tags)=><span key={tags} className="badge text-bg-primary hashTag">{tags}</span>)}
                     <div className="alert alert-success reaction" role="alert">
-                        This post has been reacted {post.reactions} people.
+                        This post has been reacted {post.reactions.likes + post.reactions.dislikes} people.
                     </div>
                 </div>
             </div>
