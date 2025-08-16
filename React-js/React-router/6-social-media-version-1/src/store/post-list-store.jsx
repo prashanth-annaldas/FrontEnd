@@ -1,0 +1,61 @@
+import { createContext, useCallback, useReducer } from "react";
+
+export const PostList = createContext({
+    postList:[],
+    addPost:()=>{},
+    deletePost:()=>{},
+});
+
+const PostListReducer = (currPostList,action)=>{
+    let newPostList = currPostList;
+    if(action.type === "DELETE_POST"){
+        newPostList = currPostList.filter((post)=>(post.id !== action.payload.postId));
+    }
+    else if(action.type === "ADD_POST"){
+        newPostList = [action.payload, ...currPostList];
+    }
+    else if(action.type === "ADD_INITIAL_POSTS"){
+        newPostList = action.payload.posts;
+    }
+    return newPostList;
+}
+
+function PostListProvider({children}){
+    const [postList,dispatchPostList] = useReducer(PostListReducer,[]);
+
+    const addPost = (posts)=>{
+        dispatchPostList({
+            type:"ADD_POST",
+            payload:{
+                posts,
+            }
+        });
+    };
+
+    const addInitialPosts = (posts)=>{
+        dispatchPostList({
+            type:"ADD_INITIAL_POSTS",
+            payload:{
+                posts,
+            },
+        });
+    };
+
+    const deletePost = useCallback(
+        (postId)=>{
+            dispatchPostList({
+                type:"DELETE_POST",
+                payload:{
+                    postId,
+                },
+            });
+        },
+        [dispatchPostList]
+    );
+
+    return <PostList.Provider value={{postList, addPost, deletePost}}>{children}</PostList.Provider>;
+}
+
+
+
+export default PostListProvider;
