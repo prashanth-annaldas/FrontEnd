@@ -4,7 +4,11 @@ import Header from './components/Header';
 import DisplayCounter from './components/DisplayCounter';
 import Container from './components/Container';
 import Controls from './components/Controls';
+import { useSelector } from 'react-redux';
+import PrivacyMsg from './components/Privacy-Toggle'
 function App() {
+
+  const privacy = useSelector((store)=>store.privacy);
 
   return (
     <>
@@ -12,7 +16,7 @@ function App() {
         <Container>
           <Header />
           <div className="col-lg-6 mx-auto">
-            <DisplayCounter />
+            {privacy ? <PrivacyMsg /> : <DisplayCounter />}
             <Controls></Controls>
           </div>
         </Container>
