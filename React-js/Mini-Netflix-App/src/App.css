@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./assets/DOC-20250904-WA0001-01.jpeg');
+  color: #fff;
+}
+
+.searchBar {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.searchButton {
+  background-color: #e50914;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #f40612;
+}
+
+/* Full-page display */
+.display {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* take full screen */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  overflow: hidden;
+}
+
+.display img{
+  margin-left: 250px;
+  height: 500px;
+}
+
+.info{
+  text-align: left;
+  margin-left: 200px;
+  margin-bottom: 100px;
+}
+
+/* Poster as background */
+.display::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4); /* darken for readability */
+  z-index: -1;
+}
+
+.display h2 {
+  font-size: 48px;
+  margin: 0 0 20px;
+}
+
+.display p {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .display h2 {
+    font-size: 32px;
+  }
+
+  .display p {
+    font-size: 16px;
+  }
+}
