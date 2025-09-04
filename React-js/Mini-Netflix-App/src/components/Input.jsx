@@ -1,6 +1,6 @@
 function Input({ movieName, setMovieName, handleFetching }) {
   return (
-    <div>
+    <form onSubmit={ handleFetching }>
       <input
         type="text"
         placeholder="Enter any movie"
@@ -8,8 +8,8 @@ function Input({ movieName, setMovieName, handleFetching }) {
         onChange={(e) => setMovieName(e.target.value)}
         className="searchBar"
       />
-      <button className="searchButton" onClick={ handleFetching }>Search</button>
-    </div>
+      <button type="submit" className="searchButton">Search</button>
+    </form>
   );
 }
 
