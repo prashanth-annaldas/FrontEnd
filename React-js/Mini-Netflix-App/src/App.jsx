@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './App.css'
 import Input from './components/Input';
 import ErrorMsg from './components/ErrorMsg';
 import Display from './components/display';
+import './App.css'
 
 function App() {
   const [movieName, setMovieName] = useState("");
