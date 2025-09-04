@@ -30,11 +30,10 @@ body {
   background-color: #f40612;
 }
 
-/* Full-page display */
 .display {
   position: relative;
   width: 100%;
-  height: 100vh; /* take full screen */
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -53,7 +52,6 @@ body {
   margin-bottom: 100px;
 }
 
-/* Poster as background */
 .display::before {
   content: "";
   position: absolute;
@@ -63,12 +61,12 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.4); /* darken for readability */
+  filter: brightness(0.4);
   z-index: -1;
 }
 
-.display h2 {
-  font-size: 48px;
+.display h1 {
+  font-size: 40px;
   margin: 0 0 20px;
 }
 
@@ -78,7 +76,6 @@ body {
   line-height: 1.6;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .display h2 {
     font-size: 32px;
