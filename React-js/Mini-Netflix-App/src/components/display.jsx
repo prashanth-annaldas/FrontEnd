@@ -3,9 +3,9 @@ function display({ movie }) {
     <div className="display">
       <img src={movie.Poster} alt={movie.Title} />
       <div className="info">
-        <h2>
+        <h1>
             {movie.Title} ({movie.Year})
-        </h2><br />
+        </h1><br />
         <p>
             <strong>Genre:</strong> {movie.Genre}
         </p><br />
