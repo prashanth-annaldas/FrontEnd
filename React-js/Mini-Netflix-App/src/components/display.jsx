@@ -1,4 +1,14 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { bagActions } from '../store/BagSlice';
+
 function display({ movie }) {
+
+  const dispatch = useDispatch();
+
+  const hanldeSave = ()=>{
+    dispatch(bagActions.addToBag(movie.imdbID))
+  }
+
   return (
     <div className="display">
       <img src={movie.Poster} alt={movie.Title} />
@@ -15,6 +25,7 @@ function display({ movie }) {
         <p>
             <strong>IMDB Rating:</strong> {movie.imdbRating}
         </p>
+        <button type="button" class="btn btn-danger saveButton" onClick={ hanldeSave } >Save</button>
       </div>
     </div>
   );
