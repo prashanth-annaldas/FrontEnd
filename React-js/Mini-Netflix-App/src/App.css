@@ -5,6 +5,18 @@ body {
   color: #fff;
 }
 
+.sidebar {
+  min-height: 800px;
+}
+
+.app-container {
+  display: flex;
+}
+
+.content {
+  width: 100%;
+}
+
 .searchBar {
   padding: 10px;
   width: 300px;
@@ -16,7 +28,7 @@ body {
 }
 
 .searchButton {
-  background-color: #e50914;
+  background-color: #dc3545;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -27,7 +39,12 @@ body {
 }
 
 .searchButton:hover {
-  background-color: #f40612;
+  background-color: #e50914;
+}
+
+.searchDiv{
+  margin-left: 350px;
+  margin-right: 320px;
 }
 
 .display {
@@ -74,6 +91,15 @@ body {
   font-size: 18px;
   margin: 10px 0;
   line-height: 1.6;
+}
+
+.loading{
+  color: white;
+  font-size: 18px;
+}
+
+.saveButton{
+  width: 100px;
 }
 
 @media (max-width: 768px) {
