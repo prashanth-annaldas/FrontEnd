@@ -1,6 +1,14 @@
 import profilePic from '../assets/IMG_4476 (1).JPG'
 
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
+
+  const handleLogout = (e)=>{
+    e.preventDefault();
+    localStorage.removeItem("Email");
+    localStorage.removeItem("Password");
+    window.location.href = '/';
+  }
+
   return (
     <div
       className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
@@ -63,7 +71,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             height="32"
             className="rounded-circle me-2"
           />
-          <button type="button" class="btn btn-danger saveButton">Logout</button>
+          <button type="button" className="btn btn-danger saveButton" onClick={ handleLogout }>Logout</button>
       </div>
     </div>
   );
