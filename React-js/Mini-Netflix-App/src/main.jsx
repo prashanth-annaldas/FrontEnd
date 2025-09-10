@@ -2,19 +2,21 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { Provider } from 'react-redux'
-import Wishlist from './components/wishlist.jsx';
 import Display from './components/wishlist.jsx';
-import Login from './components/LoginPage.jsx';
 import netflixStore from './store/index.js'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Register from './components/Register.jsx';
+import Login from './components/Login.jsx';
+import Bag from './Bag.jsx';
 
 const router = createBrowserRouter([
-  { path:"/",element:<Login /> },
+  { path:"/",element:<Register /> },
+  { path: "/Login", element: <Login /> },
   {
     path:"/app",element:<App />,
     children:[
-      { path: "/display", element: <Display /> },
-      { path: "/bag", element: <Wishlist /> },
+      { path: "display", element: <Display /> },
+      { path: "bag", element: <Bag /> },
     ],
   },
 ]);
