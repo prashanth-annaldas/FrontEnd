@@ -1,8 +1,10 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('./assets/DOC-20250904-WA0001-01.jpeg');
-  color: #fff;
+  background-image: url('./assets/Netflix-bg-1-01.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .sidebar {
@@ -106,8 +108,43 @@ body {
   .display h2 {
     font-size: 32px;
   }
-
+  
   .display p {
     font-size: 16px;
   }
+}
+
+.wishlistDiv{
+  color: white;
+}
+
+.moviesContainer{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 13px;
+  margin: 20px;
+  padding: 0px;
+  list-style: none;
+}
+
+.movieContainer {
+  position: relative;
+  width: 200px;
+  text-align: center;
+}
+
+.bagImage{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.remove_item {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
 }

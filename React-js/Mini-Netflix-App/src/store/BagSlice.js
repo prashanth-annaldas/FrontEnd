@@ -5,7 +5,13 @@ const bagSlice = createSlice({
     initialState: [],
     reducers:{
         addToBag: (state, action) =>{
-            state.push(action.payload);
+            const exist = state.find(item=> item.imdbID === action.payload.imdbID);
+            if(!exist){
+                state.push(action.payload);
+            }
+        },
+        removeFromBag: (state, action) =>{
+            return state.filter(item => item.imdbID !== action.payload);
         }
     }
 })

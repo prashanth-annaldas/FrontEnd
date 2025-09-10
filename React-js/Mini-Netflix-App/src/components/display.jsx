@@ -5,8 +5,8 @@ function display({ movie }) {
 
   const dispatch = useDispatch();
 
-  const hanldeSave = ()=>{
-    dispatch(bagActions.addToBag(movie.imdbID))
+  const handleSave = ()=>{
+    dispatch(bagActions.addToBag(movie))
   }
 
   return (
@@ -25,7 +25,7 @@ function display({ movie }) {
         <p>
             <strong>IMDB Rating:</strong> {movie.imdbRating}
         </p>
-        <button type="button" class="btn btn-danger saveButton" onClick={ hanldeSave } >Save</button>
+        <button type="button" class="btn btn-danger saveButton" onClick={ handleSave } >Save</button>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
+import Wishlist from "./components/wishlist";
+
 function bag({ movie }) {
-  return <div>
-    <img src={movie.poster} />
-    <h3>{movie.title}</h3>
-  </div>
+  return <div><Wishlist></Wishlist></div>
 }
 export default bag;
