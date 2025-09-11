@@ -71,7 +71,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             height="32"
             className="rounded-circle me-2"
           />
-          <button type="button" className="btn btn-danger saveButton" onClick={ handleLogout }>Logout</button>
+          <button type="button" className="btn btn-danger saveButton" onClick={ handleLogout }>Delete account</button>
       </div>
     </div>
   );
