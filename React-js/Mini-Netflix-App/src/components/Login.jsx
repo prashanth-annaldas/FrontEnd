@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -37,8 +37,10 @@ function Login() {
 
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light bg">
-      <main className="form-register bg-white shadow rounded p-4 bgImgIlogin" style={{ maxWidth: "400px", width: "100%" }}>
+      <h1>Netflix</h1>
+      <main className="form-register bg-white shadow rounded p-4 bgImg" style={{ maxWidth: "400px", width: "100%" }}>
         <form onSubmit={ handleLogin }>
+          <center><h1>Netflix</h1></center> <hr />
           <h1 className="h3 mb-3 fw-normal">Login</h1>
 
           <div className="form-floating mb-3">
