@@ -62,7 +62,7 @@ function App() {
             {loading && <h2 className="loading">⏳ Loading...</h2>}
           </>
         ) : (
-          <Bag movie={movie} ></Bag>
+          <Bag></Bag>
         )}
       </div>
     </div>

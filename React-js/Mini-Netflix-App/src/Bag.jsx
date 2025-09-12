@@ -1,6 +1,6 @@
 import Wishlist from "./components/wishlist";
 
-function bag({ movie }) {
+function bag() {
   return <div><Wishlist></Wishlist></div>
 }
 export default bag;
