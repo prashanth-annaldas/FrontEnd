@@ -19,7 +19,11 @@ body {
 }
 
 .sidebar {
-  min-height: 800px;
+  min-height: 729px;
+}
+
+.homeImg{
+  height: 30px;
 }
 
 .app-container {
@@ -56,7 +60,7 @@ body {
 }
 
 .searchDiv{
-  margin-left: 350px;
+  margin-left: 400px;
   margin-right: 320px;
 }
 
