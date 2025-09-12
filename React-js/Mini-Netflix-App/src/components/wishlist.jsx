@@ -1,12 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../store/BagSlice";
+import ToastMessage from './toast';
+import { useState } from "react";
 
 function Wishlist() {
   const wishlist = useSelector((store) => store.bag);
   const dispatch = useDispatch();
+  const [message, setMessage] = useState("");
 
-  const handleDeleteButton = (imdbID)=>{
+  const handleDeleteButton = (imdbID, movie)=>{
     dispatch(bagActions.removeFromBag(imdbID));
+    setMessage(`${movie.Title} is removed ✅`);
   }
   return (
     <div className="wishlistDiv">
@@ -28,11 +32,12 @@ function Wishlist() {
               />
               <span>{movie.Title}</span>
               <span>({movie.Year})</span>
-              <div class="remove_item" onClick={()=> handleDeleteButton(movie.imdbID)}>X</div>
+              <div className="remove_item" onClick={()=> handleDeleteButton(movie.imdbID, movie)}>X</div>
             </li>
           ))}
         </ul>
       )}
+      <ToastMessage message = { message }></ToastMessage>
     </div>
   );
 }
