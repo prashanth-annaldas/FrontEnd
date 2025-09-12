@@ -37,7 +37,6 @@ function Login() {
 
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light bg">
-      <h1>Netflix</h1>
       <main className="form-register bg-white shadow rounded p-4 bgImg" style={{ maxWidth: "400px", width: "100%" }}>
         <form onSubmit={ handleLogin }>
           <center><h1>Netflix</h1></center> <hr />
