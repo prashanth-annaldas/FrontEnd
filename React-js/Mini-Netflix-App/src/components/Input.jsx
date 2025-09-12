@@ -3,7 +3,7 @@ function Input({ movieName, setMovieName, handleFetching }) {
     <form onSubmit={ handleFetching }>
       <input
         type="text"
-        placeholder="Enter any movie"
+        placeholder="Search movies & web series.."
         value={movieName}
         onChange={(e) => setMovieName(e.target.value)}
         className="searchBar"
