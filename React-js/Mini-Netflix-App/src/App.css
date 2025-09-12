@@ -174,12 +174,6 @@ body {
   color: #dc3545;
 }
 
-.bgImgIlogin{
-  background-image: url("./assets/fire-2.jpg");
-  color: white;
-  border: 1px solid white;
-}
-
 .toast-badge {
   position: fixed;
   bottom: 30px;
