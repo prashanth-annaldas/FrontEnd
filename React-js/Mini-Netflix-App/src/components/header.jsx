@@ -22,15 +22,6 @@ const Header = ({ movieName,  setMovieName, handleFetching }) => {
           <div className='searchDiv'>
             <Input movieName={ movieName } setMovieName={ setMovieName } handleFetching={ handleFetching } />
           </div>
-
-          <div className="text-end">
-            <button type="button" className="btn btn-outline-light me-2">
-              Login
-            </button>
-            <button type="button" className="btn btn-danger">
-              Sign-up
-            </button>
-          </div>
         </div>
       </div>
     </header>
