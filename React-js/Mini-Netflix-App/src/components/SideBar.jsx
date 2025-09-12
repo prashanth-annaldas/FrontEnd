@@ -1,4 +1,4 @@
-import profilePic from '../assets/IMG_4476 (1).JPG'
+import profilePic from '../assets/Prashanth.jpg'
 
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
 
@@ -71,7 +71,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             height="32"
             className="rounded-circle me-2"
           />
-          <button type="button" className="btn btn-danger saveButton" onClick={ handleLogout }>Delete account</button>
+          <button type="button" className="btn btn-danger saveButton" onClick={ handleLogout }>Delete acc</button>
       </div>
     </div>
   );
