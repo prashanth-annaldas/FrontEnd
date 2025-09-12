@@ -36,8 +36,8 @@ function Login() {
   }
 
   return (
-    <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
-      <main className="form-register bg-white shadow rounded p-4" style={{ maxWidth: "400px", width: "100%" }}>
+    <div className="d-flex align-items-center justify-content-center vh-100 bg-light bg">
+      <main className="form-register bg-white shadow rounded p-4 bgImgIlogin" style={{ maxWidth: "400px", width: "100%" }}>
         <form onSubmit={ handleLogin }>
           <h1 className="h3 mb-3 fw-normal">Login</h1>
 
@@ -51,7 +51,7 @@ function Login() {
             <label htmlFor="floatingPassword">Password</label>
           </div>
 
-          <button className="btn btn-primary w-100 py-2" type="submit">
+          <button className="btn btn-danger w-100 py-2 " type="submit">
             Login
           </button>
 
