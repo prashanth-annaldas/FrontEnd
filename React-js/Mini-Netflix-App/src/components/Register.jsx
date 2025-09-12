@@ -40,6 +40,7 @@ function Register() {
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light bg">
       <main className="form-register shadow rounded p-4 bgImg" style={{ maxWidth: "400px", width: "100%" }}>
         <form onSubmit={ handleRegister }>
+          <center><h1>Netflix</h1></center> <hr />
           <h1 className="h3 mb-3 fw-normal">Register</h1>
 
           <div className="form-floating mb-3">
