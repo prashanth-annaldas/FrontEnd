@@ -37,8 +37,8 @@ function Register() {
   }
 
   return (
-    <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
-      <main className="form-register bg-white shadow rounded p-4" style={{ maxWidth: "400px", width: "100%" }}>
+    <div className="d-flex align-items-center justify-content-center vh-100 bg-light bg">
+      <main className="form-register shadow rounded p-4 bgImg" style={{ maxWidth: "400px", width: "100%" }}>
         <form onSubmit={ handleRegister }>
           <h1 className="h3 mb-3 fw-normal">Register</h1>
 
@@ -57,19 +57,12 @@ function Register() {
             <label htmlFor="floatingConfirmPassword">Confirm Password</label>
           </div>
 
-          <div className="form-check text-start my-3">
-            <input className="form-check-input" type="checkbox" value="agree" id="termsCheck" />
-            <label className="form-check-label" htmlFor="termsCheck">
-              I agree to the <a href="#">terms & conditions</a>
-            </label>
-          </div>
-
-          <button className="btn btn-primary w-100 py-2" type="submit" >
+          <button className="btn btn-danger w-100 py-2" type="submit">
             Register
           </button>
 
           <p className="mt-3 mb-0">
-            Already have an account? <Link to="/Login">Login</Link>
+            Already have an account? <Link className="red" to="/Login">Login</Link>
           </p>
 
           {err && <div>{err}</div>}
