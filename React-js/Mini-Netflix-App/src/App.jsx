@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "./API_KEY";
 import ErrorMsg from "./components/ErrorMsg";
 import Display from "./components/display";
 import Header from "./components/header";
@@ -13,8 +14,6 @@ function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [selectedTab, setSelectedTab] = useState("Search");
-
-  const API_URL = "https://www.omdbapi.com/?apikey=acc614ce";
 
   const handleFetching = async (e) => {
     e.preventDefault();
